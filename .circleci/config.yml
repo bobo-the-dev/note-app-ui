@@ -18,9 +18,6 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World!"
       - run:
-          name: "check chrome"
-          command: "which google-chrome"
-      - run:
           name: "set variable"
           command: "CHROME_BIN=/usr/bin/google-chrome karma start --single-run"
       - restore_cache:

@@ -31,7 +31,7 @@ jobs:
       # Test the code
       - run:
           name: Testing
-          command: npm run test -- --no-watch --no-progress --browsers=ChromeHeadless
+          command: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
       # Build the code
       - run:
           name: End to End Test

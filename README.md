@@ -14,22 +14,36 @@
 - [Bootstrap](https://getbootstrap.com/) - v5.2.3
 
 
-## Installation
+## Installation (via Angular CLI)
 
 Requires (mandatory)
-[Angular CLI](https://angular.io/cli)
-[Node.js](https://nodejs.org/)
+- [Angular CLI](https://angular.io/cli)
+- [Node.js](https://nodejs.org/)
 
-Optional
-[Docker](https://www.docker.com/)
-
-Install the dependenciesand start the server.
+Install the dependencies and start the server.
 
 ```sh
 git clone https://github.com/bobo-the-dev/note-app-ui.git
 cd note-app-ui
 npm install
 ng serve
+```
+Verify the app by navigate to
+
+```sh
+localhost:4200
+```
+
+## Installation (via Docker)
+
+Requires (mandatory)
+- [Docker](https://www.docker.com/)
+
+
+Run the Docker command
+
+```sh
+docker run -d -p 4200:80 -t bobothedev/note-app-ui:0.0.1
 ```
 Verify the app by navigate to
 

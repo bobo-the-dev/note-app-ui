@@ -17,6 +17,12 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+      - run:
+          name: "check chrome"
+          command: "which google-chrome"
+      - run:
+          name: "set variable"
+          command: "CHROME_BIN=/usr/bin/google-chrome karma start --single-run"
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package-lock.json" }}
@@ -32,6 +38,8 @@ jobs:
       - run:
           name: Testing
           command: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+          environment:
+            CHROME_BIN: /usr/bin/google-chrome karma start --single-run
       # Build the code
       - run:
           name: End to End Test

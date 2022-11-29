@@ -1,6 +1,8 @@
 # Note App UI
 ## The Simple Note App
 
+[![CircleCI](https://circleci.com/gh/bobo-the-dev/note-app-ui.svg?style=shield)](https://github.com/bobo-the-dev/note-app-ui)
+
 ## Features
 
 - CRUD The Note

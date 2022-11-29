@@ -17,9 +17,6 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
-      - run:
-          name: "set variable"
-          command: "CHROME_BIN=/usr/bin/google-chrome karma start --single-run"
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package-lock.json" }}

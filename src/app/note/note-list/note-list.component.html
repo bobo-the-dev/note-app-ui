@@ -1,0 +1,29 @@
+<app-message [message]="message" [error]="messageError"></app-message>
+<div class="spacer"></div>
+<div class="row">
+  <div class="col note-title">
+    <h1>Note List</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col button-group">
+    <button type="button" class="btn btn-primary" (click)="onNewNote()">
+      New Note
+    </button>
+    <button type="button" class="btn btn-dark" (click)="onRandomNote()">
+      Random Note
+    </button>
+    <button type="button" class="btn btn-danger" (click)="onDeleteAllNotes()" [disabled]="!notes.length">
+      Delete All (No Confirmation)
+    </button>
+  </div>
+</div>
+<div class="spacer"></div>
+<div class="row row-cols-4">
+  <div
+    class="col"
+    *ngFor="let note of notes; index as i; first as isFirst; last as isLast"
+  >
+    <app-note [note]="note"></app-note>
+  </div>
+</div>

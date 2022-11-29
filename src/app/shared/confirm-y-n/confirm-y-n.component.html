@@ -1,0 +1,17 @@
+<div *ngIf="message !== ''" class="container-fluid confirm-y-n-root">
+  <div class="row">
+    <div class="col">
+      <span class="message">{{ message }}</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h1 (click)="onConfirm()">
+        <i class="bi bi-check-square-fill confirm"></i>
+      </h1>
+    </div>
+    <div class="col">
+      <h1 (click)="onCancel()"><i class="bi bi-x-square-fill cancel"></i></h1>
+    </div>
+  </div>
+</div>

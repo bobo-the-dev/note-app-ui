@@ -1,0 +1,41 @@
+.card {
+  margin: 1rem;
+}
+.card-header {
+  padding: 5px 5px 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  .edit-button {
+    cursor: pointer;
+    i {
+      font-size: x-large;
+    }
+  }
+  .card-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.card-text {
+  height: 200px;
+  max-height: 200px;
+  overflow: scroll;
+}
+
+.card-footer {
+  padding: 15px 5px 5px 5px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  .timestamp {
+    font-size: smaller;
+  }
+  .delete-button {
+    cursor: pointer;
+    i {
+      font-size: x-large;
+    }
+  }
+}

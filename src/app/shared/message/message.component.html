@@ -1,0 +1,20 @@
+<div
+  *ngIf="message !== ''"
+  class="container-fluid message-container"
+  [ngClass]="{ green: !error, red: error }"
+>
+  <div class="row">
+    <div class="col-6 div-message">
+      <span class="message">{{ message }}</span>
+    </div>
+    <div class="col-6 div-btn-close">
+      <button
+        (click)="onClose()"
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="toast"
+        aria-label="Close"
+      ></button>
+    </div>
+  </div>
+</div>

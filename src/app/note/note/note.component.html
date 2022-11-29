@@ -1,0 +1,21 @@
+<app-confirm-y-n [message]="message" (callback)="onConfirmCallback($event)"></app-confirm-y-n>
+<div class="card" style="width: 18rem">
+  <div class="card-body">
+    <div class="card-header">
+      <h5 class="card-title">{{ note?.title }}</h5>
+      <div class="edit-button">
+        <a [routerLink]="'' + note?.id +'/edit'"><i class="bi bi-pencil"></i></a>
+      </div>
+    </div>
+
+    <p class="card-text">
+      {{ note?.content }}
+    </p>
+    <div class="card-footer">
+      <div class="timestamp">{{ note?.updatedAt | date:'short'}}</div>
+      <div class="delete-button">
+        <i (click)="onDelete(note?.id)" class="bi bi-trash"></i>
+      </div>
+    </div>
+  </div>
+</div>

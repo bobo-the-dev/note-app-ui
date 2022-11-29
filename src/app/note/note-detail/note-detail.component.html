@@ -1,0 +1,30 @@
+<app-confirm-y-n [message]="confirmMessage" (callback)="onConfirmCallback($event)"></app-confirm-y-n>
+<app-message [message]="message" [error]="messageError"></app-message>
+<div class="spacer"></div>
+<div class="row">
+  <div class="col align-self-center">
+    <form [formGroup]="noteDetailForm" (ngSubmit)="onSave()">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          formControlName="title"
+          placeholder="name@example.com"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="content" class="form-label">Content</label>
+        <textarea
+          class="form-control"
+          id="content"
+          formControlName="content"
+          rows="3"
+        ></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit" [disabled]="!noteDetailForm.valid">Save</button>
+      <button class="btn btn-secondary cancel-btn" type="button" (click)="onCancel()">Cancel</button>
+    </form>
+  </div>
+</div>

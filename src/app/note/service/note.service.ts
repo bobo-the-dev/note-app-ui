@@ -1,15 +1,16 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { faker } from '@faker-js/faker';
-import { first, Subject } from 'rxjs';
-import { Note } from '../model/note';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { environment } from "../../../environments/environment";
+import { faker } from "@faker-js/faker";
+import { first, Subject } from "rxjs";
+import { Note } from "../model/note";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class NoteService {
-  private readonly basedUrl = 'http://localhost:3000/api';
-  private readonly noteApiUrl = this.basedUrl + '/notes';
+  private readonly basedUrl = environment.apiEndPoint.note;
+  private readonly noteApiUrl = this.basedUrl + "/notes";
 
   private notes: Note[] = [];
   public note$ = new Subject<Note[]>();

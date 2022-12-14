@@ -3,6 +3,8 @@
 
 [![CircleCI](https://circleci.com/gh/bobo-the-dev/note-app-ui.svg?style=shield)](https://github.com/bobo-the-dev/note-app-ui)
 
+# [🚀Live Version is Here](https://bobo-the-dev.com/)
+
 ## Features
 
 - CRUD The Note
@@ -50,6 +52,10 @@ Verify the app by navigate to
 ```sh
 localhost:4200
 ```
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
 ## License
 
 MIT
